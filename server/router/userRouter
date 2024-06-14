@@ -1,0 +1,9 @@
+const express = require("express");
+const { postUser, getUsers } = require("../controller/registation");
+
+const router = express.Router();
+
+router.route("/user/register").post(postUser);
+router.route("/user/all").get(getUsers);
+
+module.exports = router;
