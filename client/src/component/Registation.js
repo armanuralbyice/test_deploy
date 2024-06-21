@@ -17,7 +17,7 @@ const Registation = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://test-deploy-api-gamma.vercel.app/api/user/register", user)
+      .post("http://localhost:4000/api/user/register", user)
       .then((res) => {
         console.log("Success data:", res.data);
         window.alert("Data added successfully");

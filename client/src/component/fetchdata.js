@@ -6,9 +6,7 @@ const Fetchdata = () => {
 
   const IntialData = async () => {
     try {
-      const response = await axios.get(
-        "https://test-deploy-api-gamma.vercel.app/api/user/all"
-      );
+      const response = await axios.get("http://localhost:4000/api/user/all");
       console.log(response.data);
       setUsers(response.data.users);
     } catch (error) {
